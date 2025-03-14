@@ -153,5 +153,36 @@ def edit_account(request):
         form = UserForm(instance=user_instance)
     return render(request, 'edit_details.html', {'form': form})
 
+def rewards(request):
+    if request.method == 'GET':
+        userprofile = get_object_or_404(UserProfile, userId=request.user.id)
+        user_points = userprofile.points
+      
+        rewards = [['Bronze', 100, "cross.png"], ['Silver', 250, "cross.png"], ['Gold', 500, "cross.png"]]
+        user_rewards = []
+        if user_points >= rewards[0][1]:
+            rewards[0][2] = "tick.png"
+            user_rewards.append(rewards[0])
+        else:
+            user_rewards.append(rewards[0])
+        
+        if user_points >= rewards[1][1]:
+            rewards[1][2] = "tick.png"
+            user_rewards.append(rewards[1])
+        else:
+            user_rewards.append(rewards[1])
 
+        if user_points >= rewards[2][1]:
+            rewards[2][2] = "tick.png"
+            user_rewards.append(rewards[2])
+        else:
+            user_rewards.append(rewards[2])
+
+
+
+        context = {
+            'rewards': user_rewards,
+        }
+        print(user_rewards)
+    return render(request, 'rewards.html', context)
 

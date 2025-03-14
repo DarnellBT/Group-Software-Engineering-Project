@@ -39,7 +39,9 @@
                 {% endif %}
             </p>
             {% endfor %}
-
+            <div class="privacy">
+                <a href="{% url 'privacy' %}">When you create an account, you agree to our private policy</a>
+            </div>
             <!--Submission buttom-->
             <button type="submit">Submit</button>
             
@@ -47,6 +49,7 @@
             <div class="link-login">
                 <a href="{% url 'login' %}">Already registered?</a>
             </div>
+
         </form>
 </main>
 <script src="index.js"></script>

@@ -11,6 +11,7 @@ class RegistrationForm(UserCreationForm):
     """Class contains registration form using django UserCreationForm and related functions"""
     email = forms.EmailField()
     username = forms.CharField()
+    private_policy = forms.BooleanField(required=True)
 
     class Meta:
         model = User
