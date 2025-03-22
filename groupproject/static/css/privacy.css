@@ -1,5 +1,5 @@
 .button-back {
-    color: #079b38 !important;
+    color: black !important;
     padding: 5px 10px !important;
     border-radius: 5px !important;
     text-align: center !important;
@@ -49,7 +49,7 @@ body {
     margin-top: 0 !important;
     margin-bottom: 0 !important;
     text-decoration: none !important;
-    color: #00a87e !important;
+    color: #079b38 !important;
     font-family: 'poppy', sans-serif;
     display: flex;
     align-items: center;

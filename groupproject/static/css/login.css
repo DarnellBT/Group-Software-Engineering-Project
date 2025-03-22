@@ -7,6 +7,10 @@ h1 {
     font-size: 2vw;
 }
 
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
 form {
     text-align: center;
     font-size: 1.5vw;

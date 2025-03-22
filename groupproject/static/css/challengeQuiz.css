@@ -1,28 +1,25 @@
-
 .page-header {
     border-radius: 40px;
-
     width: 70%;
-    height: 15%;
+    height: auto; /* Adjusted for dynamic height */
     background-color: #00c87e;
     margin: auto;
     margin-top: 4%;
-
-
+    text-align: center;
+    padding: 20px; /* Added padding for better spacing */
 }
 
 .challenge {
-    color: white;
+    color: black; /* Changed color to black */
     text-align: center;
     font-weight: bold;
     font-size: 40px;
     margin: 0;
-
 }
 
 .challenge-descr {
     font-size: 25px;
-    color: white;
+    color: black; /* Changed color to black */
     text-align: center;
     margin: 0;
 }
@@ -30,7 +27,7 @@
 .challenge-points {
     text-align: center;
     margin: 0;
-    color: white;
+    color: black;
 }
 
 .image-field {
@@ -39,33 +36,42 @@
 
 .box {
     border-radius: 25px;
-
-    width: 40%;
-    height: 40%;
+    width: 50%; /* Increased width for better layout */
+    height: auto;
     background-color: #00c87e;
     margin: auto;
-
-    margin-top: 100px;
+    margin-top: 50px; /* Reduced margin for better spacing */
+    padding: 30px; /* Increased padding for better spacing */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added shadow for better visual appeal */
+    display: flex; /* Added flexbox for alignment */
+    flex-direction: column; /* Align items vertically */
+    align-items: center; /* Center items horizontally */
+    justify-content: center; /* Center items vertically */
+    gap: 20px; /* Added spacing between elements */
 }
 
 form {
     margin: auto;
-    text-align: left;
+    text-align: center; /* Centered the form */
     margin-top: 3%;
     padding: 4%;
-    margin-left: 30%;
+    width: 80%; /* Adjusted width for better responsiveness */
 }
 
 .submit {
     background-color: #007d69;
-    margin-top: 10%;
+    margin-top: 20px; /* Reduced margin for better spacing */
     border-radius: 25px;
     outline: none;
     margin-bottom: 5%;
     color: white;
-    padding: 2%;
+    padding: 10px 20px; /* Adjusted padding for better button size */
     font-weight: bold;
-
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    display: block; /* Centered the button */
+    width: 50%; /* Adjusted button width */
 }
 
 .nav-left {
@@ -78,8 +84,7 @@ form {
     margin-right: auto;
     border-radius: 40px;
     width: 10%;
-
-
+    cursor: pointer; /* Added for better UX */
 }
 
 .nav-right {
@@ -89,9 +94,10 @@ form {
     font-weight: bold;
     text-align: center;
     align-items: center;
-    margin-right: right;
+    margin-right: auto; /* Fixed alignment issue */
     border-radius: 40px;
     width: 10%;
+    cursor: pointer; /* Added for better UX */
 }
 
 a {
@@ -101,9 +107,8 @@ a {
 
 table {
     width: 100%;
-
+    border-collapse: collapse; /* Added for cleaner table layout */
 }
-
 
 tr {
     display: flex;
@@ -112,23 +117,34 @@ tr {
 }
 
 .quiz-question {
-    color: white;
-    margin: auto;
+    color: black;
+    margin: 20px 0; /* Added margin for spacing */
+    font-size: 20px; /* Increased font size for readability */
+    text-align: center; /* Centered the question text */
 }
 
 .quiz-answer {
-    margin-left: auto;
-    margin-top: 1%;
-    background-color: beige;
+    margin: 10px 0; /* Added margin for spacing */
+    background-color: transparent; /* Removed background for cleaner look */
+    padding: 0; /* Removed padding for better alignment */
+    border-radius: 0; /* Removed border radius */
+    display: flex; /* Added flex for horizontal alignment */
+    align-items: center; /* Vertically align items */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 10px; /* Added spacing between radio button and text */
+    width: auto; /* Adjusted width for better layout */
 }
 
 form label {
-    display: inline-block;
-    margin-left: 5px;
-    vertical-align: middle;
+    display: flex; /* Changed to flex for horizontal alignment */
+    align-items: center; /* Vertically align radio button and text */
+    gap: 10px; /* Added spacing between radio button and text */
+    margin: 5px 0; /* Added vertical margin for spacing between options */
+    font-size: 16px; /* Increased font size for readability */
 }
 
 input[type="radio"] {
     vertical-align: middle;
-    margin-right: 10px;
+    margin: 0; /* Removed unnecessary margin */
+    cursor: pointer; /* Added for better UX */
 }

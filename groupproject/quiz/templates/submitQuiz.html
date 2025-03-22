@@ -7,10 +7,61 @@
     <title>Results</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'css/results.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Sharp&display=swap"/>
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
+
+   
+        <div class='container'>
+        <aside>
+            <div class="top">
+              <div class="logo">
+                <h2><span class="danger">Results</span></h2>
+              </div>
+              <div class="close" id="close_button">
+                <span class="material-symbols-sharp">close</span>
+              </div>
+            </div>
+        
+            <div class="sidebar">
+        
+              <a href="{% url 'home' %}"> 
+                <span class="material-symbols-sharp">grid_view</span>
+                <h3> Home </h3>
+              </a>
+        
+        
+              {% if user_auth.is_anonymous %}
+              <a href="{% url 'login'%}"> 
+                <span class="material-symbols-sharp"> login </span>
+                <h3> Sign In </h3>
+              </a>
+              {% endif %}
+        
+              {% if user_auth.is_authenticated %}
+              <a href="{% url 'logout'%}"> 
+                <span class="material-symbols-sharp"> login </span>
+                <h3> Logout </h3>
+              </a>
+              {% endif %}
+              
+            </div>
+          </aside>
+        </div>
+    
+          <div class="right">
+            <div class="top">
+              <button id="menu_bar">
+                <span class="material-symbols-sharp"> menu </span>
+              </button>
+          
+            </div>
+            
+          </div>
+
+      <div class="admin-page-box">
       <h1>Results</h1>
 
       <!-- Display the score -->
@@ -30,9 +81,9 @@
           <li>Question {{ question_id }}: The correct answer is {{ answer }}</li>
         {% endfor %}  
       </ul>
-
+      </div>
     </main>
     
-    <script src="index.js"></script>
+    <script src="{% static 'js/dashboard.js' %}"></script>
   </body>
 </html>
